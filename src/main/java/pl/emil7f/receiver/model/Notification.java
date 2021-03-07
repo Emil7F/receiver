@@ -1,9 +1,7 @@
-package pl.emil7f.notification;
+package pl.emil7f.receiver.model;
 
 
-import java.io.Serializable;
-
-public class Notification implements Serializable {
+public class Notification {
     private String email;
     private String title;
     private String body;
