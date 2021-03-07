@@ -1,5 +1,6 @@
 package pl.emil7f.receiver;
 
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,10 +26,10 @@ public class MessageController {
         }
     }
 
-//    @RabbitListener(queues = "myQueue")
-//    public void listenerMessage(String message) {
-//        System.out.println(message);
-//    }
+    @RabbitListener(queues = "myQueue")
+    public void listenerMessage(Notification notification) {
+        System.out.println(notification.getEmail());
+    }
 
     @GetMapping("/notification")
     public ResponseEntity<Notification> receiveNotification() {

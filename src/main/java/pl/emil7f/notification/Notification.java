@@ -31,4 +31,5 @@ public class Notification implements Serializable {
     public void setBody(String body) {
         this.body = body;
     }
+
 }
