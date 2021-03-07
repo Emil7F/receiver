@@ -1,4 +1,4 @@
-package pl.emil7f.receiver;
+package pl.emil7f.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
